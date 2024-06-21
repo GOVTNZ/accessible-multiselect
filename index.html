@@ -4,9 +4,28 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Multiselct component</title>
   </head>
   <body>
+
+    <form action="">
+      <details>
+          <summary id="foo">
+              Fieldset Label text 
+              <span>[item count text]</span>
+          </summary>
+  
+  
+              <fieldset aria-labelledby="foo">
+                  <ul>
+                      <li><input value="foo" type="checkbox"><label>option 1</label></li>
+                      <li><input value="bar" type="checkbox"><label>option 2</label></li>
+                  </ul>
+              </fieldset>
+              
+          </details>
+      </form>
+      
     <div id="app"></div>
     <script type="module" src="/main.js"></script>
   </body>
