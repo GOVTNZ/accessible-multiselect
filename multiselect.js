@@ -3,11 +3,24 @@ export function setupMultiselect(element) {
     // convert to selected items count (yoink from gazette)
     // make count text configurable?
 
-  let counter = 0
-  const setCounter = (count) => {
-    counter = count
-    element.innerHTML = `count is ${counter}`
+
+    // Select the element with class 'multiselect__selected-count' from within the multiselect element
+    const selectedCountElement = element.querySelector('.multiselect__selected-count');
+
+  // count selected checkboxes
+  const updateCount = () => {
+    const checkboxes = element.querySelectorAll('.multiselect__checkbox');
+    const selectedCount = Array.from(checkboxes).filter(checkbox => checkbox.checked).length;
+    selectedCountElement.textContent = selectedCount;
   }
-  element.addEventListener('click', () => setCounter(counter + 1))
-  setCounter(0)
+
+  // Add event listeners to checkboxes within the multiselect element
+  const checkboxes = element.querySelectorAll('.multiselect__checkbox');
+  checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', updateCount);
+  });
+
+  // TODO: Coding 
+    // 
+
 }

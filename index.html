@@ -10,23 +10,21 @@
 
     <form action="">
       <details class="multiselect">
-          <summary id="foo">
-              Label text 
-              <span class="multiselect__selected-count">[item count]</span>
+          <summary id="foo" class="multiselect__selected-count">
+              Label text [item count]
           </summary>
   
   
               <fieldset aria-labelledby="foo">
                   <ul>
-                      <li><input value="foo" type="checkbox"><label>option 1</label></li>
-                      <li><input value="bar" type="checkbox"><label>option 2</label></li>
+                      <li><input value="foo"  class="multiselect__checkbox" type="checkbox"><label>option 1</label></li>
+                      <li><input value="bar"  class="multiselect__checkbox" type="checkbox"><label>option 2</label></li>
                   </ul>
               </fieldset>
               
           </details>
       </form>
 
-    <div id="app"></div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
