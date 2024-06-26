@@ -15,13 +15,13 @@
   <form action="">
     <details class="multiselect">
       <summary id="foo">
-        Notice type <output role="status" class="multiselect__selected-count"><!-- [item count] --></output>
+        Notice type <output aria-live="polite" role="status" class="multiselect__selected-count"><!-- [item count] --></output>
       </summary>
 
       <fieldset aria-labelledby="foo">
-        <ul>
-          <li><input id="option1" value="foo" type="checkbox"><label for="option1">option 1</label></li>
-          <li><input id="option2" value="bar" type="checkbox"><label for="option2">option 2</label></li>
+        <ul role="list">
+          <li><input id="option1" value="foo" type="checkbox"><label for="option1">Option 1</label></li>
+          <li><input id="option2" value="bar" type="checkbox"><label for="option2">Option 2</label></li>
         </ul>
       </fieldset>
 
