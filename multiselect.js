@@ -7,7 +7,7 @@ export function setupMultiselect(element) {
   // Count selected checkboxes
   const updateCount = () => {
     const selectedCount = Array.from(checkboxes).filter(checkbox => checkbox.checked).length;
-    selectedCountElement.textContent = `${selectedCount} of ${checkboxes.length}`;
+    selectedCountElement.textContent = `${selectedCount} of ${checkboxes.length} selected`;
   }
   
   checkboxes.forEach(checkbox => {
